@@ -1,0 +1,20 @@
+<?php
+
+namespace spec\Madkom\Docker\Manager;
+
+use Madkom\Docker\Http\Client;
+use PhpSpec\ObjectBehavior;
+use Prophecy\Argument;
+
+class ImageManagerSpec extends ObjectBehavior
+{
+    function let(Client $client)
+    {
+        $this->beConstructedWith($client);
+    }
+
+    function it_is_initializable()
+    {
+        $this->shouldHaveType('Madkom\Docker\Manager\ImageManager');
+    }
+}

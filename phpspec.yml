@@ -1,0 +1,16 @@
+extensions:
+    - PhpSpec\Extension\CodeCoverageExtension
+    - Knp\PhpSpec\WellDone\Extension
+
+suites:
+  types:
+    namespace: Madkom\Docker
+    psr4_prefix: Madkom\Docker
+
+knp.welldone.exclusion:
+    - "*Controller"
+    - "*Test"
+
+code_coverage:
+    output: tests/coverage/phpspec.cov
+    format: php
